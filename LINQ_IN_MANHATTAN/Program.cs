@@ -10,21 +10,27 @@ namespace LINQ_IN_MANHATTAN
 {
     class Program
     {
+        public static Root JsonData {get; set;}
 
-        static void Main(string[] args)
+    static void Main(string[] args)
+    {
+            GetJson();
+            var GetNeighborhoods = from place in JsonData.features
+            select place.properties.neighborhood;
+    }
+
+        public static void GetJson()
         {
-            Neighborhood lilNeigh = new Neighborhood();
-/*            lilNeigh.JsonSerialize(typeof(Neighborhood), "../../data.json");
-*/
-            string strResult = JsonConvert.SerializeObject(lilNeigh);
-            strResult = File.ReadAllText(@"../../data.json");
-            Neighborhood result = JsonConvert.DeserializeObject<Neighborhood>(strResult);
-            Console.WriteLine(result.ToString());
+            string rawData = File.ReadAllText("../../../Assets/data.json");
+            JsonData = JsonConvert.DeserializeObject<Root>(rawData);
 
+            foreach (var item in JsonData.features)
+            {
+                Console.WriteLine(item.properties.neighborhood);
+            }
         }
 
-
-        }
+}
 
 
 
