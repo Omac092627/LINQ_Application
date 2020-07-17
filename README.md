@@ -7,9 +7,12 @@ ________________________________________________________________________________
 
 Description :
 
- A LINQ Console Application:
+I want to query my json data and print what's asked of me in the console.
 
-.......
+I want to output all of the neighborhoods in this data list (Final Total: 147 neighborhoods)
+Then I want to filter out all the neighborhoods that do not have any names (Final Total: 143)
+I removed the duplicates (Final Total: 39 neighborhoods)
+Rewrite at least one of these questions only using the opposing method (example: Use LINQ Query statements instead of LINQ method calls and vice versa.)
 
 
 
@@ -19,7 +22,7 @@ ________________________________________________________________________________
 Getting Started
 Clone this repository to your local machine.
 
-$ git clone [https://github.com/Omac092627/LINQ_Application]
+$ git clone [https://github.com/Omac092627/LINQ_Application.git]
 To run the program from Visual Studio:
 Select File -> Open -> Project/Solution
 
@@ -39,7 +42,18 @@ ________________________________________________________________________________
 Visuals
 
 
-Start the app
+Output 147 neighbors - woop woop
+![147](images/147.PNG)
+
+
+
+Output neighbors excluding the non-named - 143
+![143](images/143.PNG)
+
+
+
+Output neighbors exluding duplicates
+![39](images/39.PNG)
 
 
 
